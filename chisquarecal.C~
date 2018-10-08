@@ -1,0 +1,11 @@
+{
+  ifstream input("TabulatedvsCalculatedE.dat");
+  double x, y, eX,eY,sum;
+  while(1)
+	{
+	  input>>x>>y>>eX>>eY;
+	  if(!input.good())break;
+	  sum+=(x-y)*(x-y)/(eY*eY);
+	}
+  cout<<sum<<endl;
+}
